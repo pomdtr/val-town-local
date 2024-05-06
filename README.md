@@ -1,10 +1,18 @@
 # Edit vals locally
 
+## Requirements
+
+- git
+- deno
+
 ## Setup
 
+1. Clone this repository: `git clone https://github.com/pomdtr/val-town-local.git`
+1. Navigate to the repository: `cd val-town-local`
+1. Remove the `.git` directory: `rm -rf .git`
 1. Copy .env.template to .env
-2. Fill-in the `VALTOWN_TOKEN` environment variable with your token
-3. Trigger a first sync: `deno task sync`
+1. Fill-in the `VALTOWN_TOKEN` environment variable with your token
+1. Trigger a first sync: `deno task sync`
 
 ## Usage
 

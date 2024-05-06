@@ -12,8 +12,8 @@
   },
   "tasks": {
     "sync": "deno run --allow-all --quiet --env ./sync.ts",
-    "serve": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=valtown.env ./serve.ts",
-    "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=valtown.env",
+    "serve": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=val-town.env ./serve.ts",
+    "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=val-town.env",
     "cache": "deno cache vals/*.tsx"
   },
   "importMap": "./import_map.json"

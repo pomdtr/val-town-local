@@ -240,11 +240,11 @@ for (const val of Object.values(remoteVals)) {
 }
 
 const remoteEnv = await fetchEnv();
-const localEnv = existsSync("valtown.env")
-  ? dotenv.parse(Deno.readTextFileSync("valtown.env"))
+const localEnv = existsSync("val-town.env")
+  ? dotenv.parse(Deno.readTextFileSync("val-town.env"))
   : {};
 if (JSON.stringify(remoteEnv) !== JSON.stringify(localEnv)) {
-  Deno.writeTextFileSync("valtown.env", dotenv.stringify(remoteEnv));
+  Deno.writeTextFileSync("val-town.env", dotenv.stringify(remoteEnv));
 }
 
 Deno.writeTextFileSync(
