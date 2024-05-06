@@ -1,0 +1,22 @@
+{
+  "lock": false,
+  "unstable": [
+    "sloppy-imports"
+  ],
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any"
+      ]
+    }
+  },
+  "tasks": {
+    "sync": "deno run --allow-all --quiet --env ./sync.ts",
+    "serve": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=valtown.env ./serve.ts",
+    "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=valtown.env",
+    "cache": "deno cache vals/*.tsx"
+  },
+  "imports": {
+    "https://esm.town/v/pomdtr/": "./vals/"
+  }
+}
