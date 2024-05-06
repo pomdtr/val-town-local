@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "https://esm.town/v/pomdtr/": "./vals/"
+  }
+}

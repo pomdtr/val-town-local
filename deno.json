@@ -16,7 +16,5 @@
     "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=valtown.env",
     "cache": "deno cache vals/*.tsx"
   },
-  "imports": {
-    "https://esm.town/v/pomdtr/": "./vals/"
-  }
+  "importMap": "./import_map.json"
 }

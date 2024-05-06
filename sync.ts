@@ -91,6 +91,10 @@ type Meta = {
 const lock: Record<string, Meta> = existsSync("vt.lock")
   ? JSON.parse(Deno.readTextFileSync("vt.lock"))
   : {};
+
+if (!existsSync("vals")) {
+  Deno.mkdirSync("vals");
+}
 const files = [...Deno.readDirSync("vals")]
   .filter((f) => f.isFile && f.name.endsWith(".tsx"))
   .map((f) => f.name);
@@ -243,10 +247,17 @@ if (JSON.stringify(remoteEnv) !== JSON.stringify(localEnv)) {
   Deno.writeTextFileSync("valtown.env", dotenv.stringify(remoteEnv));
 }
 
-const manifest = JSON.parse(Deno.readTextFileSync("deno.json"));
-manifest.imports = {
-  [`https://esm.town/v/${me.username}/`]: "./vals/",
-};
-Deno.writeTextFileSync("deno.json", JSON.stringify(manifest, null, 2));
+Deno.writeTextFileSync(
+  "import_map.json",
+  JSON.stringify(
+    {
+      imports: {
+        [`https://esm.town/v/${me.username}/`]: "./vals/",
+      },
+    },
+    null,
+    2
+  )
+);
 
 Deno.writeTextFileSync("vt.lock", JSON.stringify(lock, null, 2));

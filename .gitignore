@@ -1,3 +1,4 @@
+vals/
+vt.lock
 .env
 valtown.env
-vt.lock
