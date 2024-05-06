@@ -1,14 +1,14 @@
-# Local Development for val.town
+# Edit vals locally
 
 ## Setup
 
 1. Copy .env.template to .env
-2. Fill in the values in .env
-3. Trigger a first sync (see below)
+2. Fill-in the `VALTOWN_TOKEN` environment variable with your token
+3. Trigger a first sync: `deno task sync`
 
 ## Usage
 
-### Trigger a sync
+### Triggering a 2-way sync
 
 ```sh
 deno task sync
