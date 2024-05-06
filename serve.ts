@@ -19,8 +19,10 @@ if (mod.default) {
   handler = mod.default;
 } else {
   const exports = Object.values(mod);
-  if (exports.length > 1) {
-    console.error("Too many exports");
+  if (exports.length != 1) {
+    console.error(
+      "Vals require a default export, or exactly one named export."
+    );
     Deno.exit(1);
   }
 
