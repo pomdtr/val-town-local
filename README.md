@@ -22,11 +22,11 @@ deno task sync
 ### Start a local server
 
 ```sh
-deno task serve --port 8000 vals/<your-val>.tsx
+deno task serve --port 8000 <username>/<val>.tsx
 ```
 
 ### Run a val locally
 
 ```sh
-deno task run vals/<your-val>.tsx
+deno task run <username>/<val>.tsx
 ```
