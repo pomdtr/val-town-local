@@ -1,20 +1,15 @@
 {
   "lock": false,
-  "unstable": [
-    "sloppy-imports"
-  ],
+  "unstable": ["sloppy-imports"],
   "lint": {
     "rules": {
-      "exclude": [
-        "no-explicit-any"
-      ]
+      "exclude": ["no-explicit-any"]
     }
   },
   "tasks": {
     "sync": "deno run --reload=https://esm.town --allow-all --quiet --env https://esm.town/v/pomdtr/sync",
     "serve": "deno run --watch=vals --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=val-town.env ./serve.ts",
-    "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=val-town.env",
-    "cache": "deno cache vals/*.tsx"
+    "run": "deno run --reload=https://esm.town --allow-read --allow-net --allow-env --quiet --env=val-town.env"
   },
   "importMap": "./import_map.json"
 }
